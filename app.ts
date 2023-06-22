@@ -1,10 +1,13 @@
 type exampleUnionType = number | string
 
-function add(num1: number , num2: number) {
+function add(num1: number , num2: number): number {
   return num1 + num2;
 }
 
 console.log(add(2, 4));
+
+let addFunctionPointer: (a:  number, b: number) => number;
+addFunctionPointer = add;
 
 function addAnything(input1: exampleUnionType, input2: exampleUnionType) {
   return `${input1} and ${input2}`;
